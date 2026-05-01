@@ -1,0 +1,238 @@
+==================================================
+ftp client
+==================================================
+
+ftp server connection
+enter ftp server address: 127.0.0.1
+enter username: TestUser
+enter password: 
+connected to 127.0.0.1
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 1
+
+current directory: /
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 14:17         server
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 2
+
+current directory: /
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 14:17         server
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: cd server
+changed to: /server
+
+current directory: /server
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 14:17         TestUser
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: cd TestUser
+changed to: /server/TestUser
+
+current directory: /server/TestUser
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 13:47         directory1
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: cd directory1
+changed to: /server/TestUser/directory1
+
+current directory: /server/TestUser/directory1
+
+type           size modified             name
+----------------------------------------------------------------------
+[FILE]        0.0 B May 01 13:46         file0.txt
+[FILE]       10.0 B May 01 13:47         file1.txt
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: cd ../
+changed to: /server/TestUser
+
+current directory: /server/TestUser
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 13:47         directory1
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: back
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 3
+
+upload file to server
+enter local file path: /home/anna/SPBU/Computer_networks/TestUser_local_dir/file2.txt
+enter remote filename (enter to keep original): /server/TestUser/directory1/file2_uploaded.txt
+uploading '/server/TestUser/directory1/file2_uploaded.txt' to server...
+.
+file uploaded successfully as '/server/TestUser/directory1/file2_uploaded.txt'
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 2
+
+current directory: /server/TestUser
+
+type           size modified             name
+----------------------------------------------------------------------
+[DIR]         0.0 B May 01 14:18         directory1
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: cd directory1
+changed to: /server/TestUser/directory1
+
+current directory: /server/TestUser/directory1
+
+type           size modified             name
+----------------------------------------------------------------------
+[FILE]        0.0 B May 01 13:46         file0.txt
+[FILE]       10.0 B May 01 13:47         file1.txt
+[FILE]       14.0 B May 01 14:18         file2_uploaded.txt
+
+navigation commands:
+cwd - show current directory
+cd <directory> - change directory
+.. - go up one level
+list - refresh listing
+back - return to main menu
+
+enter command: back
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 4
+
+download file from server
+
+current directory: /server/TestUser/directory1
+
+type           size modified             name
+----------------------------------------------------------------------
+[FILE]        0.0 B May 01 13:46         file0.txt
+[FILE]       10.0 B May 01 13:47         file1.txt
+[FILE]       14.0 B May 01 14:18         file2_uploaded.txt
+
+enter filename on server to download: file0.txt
+enter local save path (enter for current directory): /home/anna/SPBU/Computer_networks/TestUser_local_dir/file0_downloaded.txt
+downloading 'file0.txt'...
+file saved as '/home/anna/SPBU/Computer_networks/TestUser_local_dir/file0_downloaded.txt'
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 5
+current directory: /server/TestUser/directory1
+
+==================================================
+main menu
+==================================================
+1. list files on server
+2. navigate directories
+3. upload file to server
+4. download file from server
+5. show current directory
+0. exit
+
+select option (0-5): 0
+
+goodbye
+disconnected from server
